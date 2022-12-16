@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 // This a service worker file for receiving push notifitications.
 // See `Access registration token section` @ https://firebase.google.com/docs/cloud-messaging/js/client#retrieve-the-current-registration-token
 
@@ -8,13 +10,13 @@ importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js');
 
 // Initialize the Firebase app in the service worker by passing the generated config
 const firebaseConfig = {
-  apiKey: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_API_KEY`,
-  authDomain: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_AUTH_DOMAIN`,
-  projectId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_PROJECT_ID`,
-  storageBucket: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_STORAGE_BUCKET`,
-  messagingSenderId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_SENDER_ID`,
-  appId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_APP_ID`,
-  measurementId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_MEASUREMENT_ID`,
+  apiKey: "AIzaSyC7cepGyz2PXHpJDfsVNnuMAtXCS7U8A0s",
+  authDomain: "medlinkdemo.firebaseapp.com",
+  projectId: "medlinkdemo",
+  storageBucket: "medlinkdemo.appspot.com",
+  messagingSenderId: "1050994847313",
+  appId: "1:1050994847313:web:41aff9816790ad0d2c9270",
+  measurementId: "G-WFPVM5SD6X"
 };
 
 
@@ -24,14 +26,14 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 // Handle incoming messages while the app is not in focus (i.e in the background, hidden behind other tabs, or completely closed).
-messaging.onBackgroundMessage(function(payload) {
-  console.log('Received background message ', payload);
+// messaging.onBackgroundMessage(function(payload) {
+//   console.log('Received background message ', payload);
 
-  const notificationTitle = payload.notification.title;
-  const notificationOptions = {
-    body: payload.notification.body,
-  };
+//   const notificationTitle = payload.notification.title;
+//   const notificationOptions = {
+//     body: payload.notification.body,
+//   };
 
-  self.registration.showNotification(notificationTitle,
-    notificationOptions);
-});
+//   self.registration.showNotification(notificationTitle,
+//     notificationOptions);
+// });

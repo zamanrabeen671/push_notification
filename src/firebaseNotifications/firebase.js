@@ -5,13 +5,13 @@ import { initializeApp } from 'firebase/app';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 var firebaseConfig = {
-  apiKey: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_API_KEY`,
-  authDomain: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_AUTH_DOMAIN`,
-  projectId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_PROJECT_ID`,
-  storageBucket: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_STORAGE_BUCKET`,
-  messagingSenderId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_SENDER_ID`,
-  appId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_APP_ID`,
-  measurementId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_MEASUREMENT_ID`,
+  apiKey: "AIzaSyC7cepGyz2PXHpJDfsVNnuMAtXCS7U8A0s",
+    authDomain: "medlinkdemo.firebaseapp.com",
+    projectId: "medlinkdemo",
+    storageBucket: "medlinkdemo.appspot.com",
+    messagingSenderId: "1050994847313",
+    appId: "1:1050994847313:web:41aff9816790ad0d2c9270",
+    measurementId: "G-WFPVM5SD6X"
 };
 
 initializeApp(firebaseConfig);
@@ -19,7 +19,7 @@ initializeApp(firebaseConfig);
 const messaging = getMessaging();
 
 export const requestForToken = () => {
-  return getToken(messaging, { vapidKey: `REPLACE_WITH_YOUR_VAPID_KEY` })
+  return getToken(messaging, { vapidKey: `BIDJt_dqiJq6m0TkURXxIdgzy0Hf5Bjzs56HEgXA4xdgOtOzC2I6JxJSqvpICTBY2yaTQ6i9b077ztSzN0f1j9o` })
     .then((currentToken) => {
       if (currentToken) {
         console.log('current token for client: ', currentToken);
